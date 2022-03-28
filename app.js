@@ -10,7 +10,7 @@ module.exports = class MarsRover {
       SOUTH: { x: 0, y: -1 },
       WEST: { x: -1, y: 0 },
     };
-    this.instructionsChar = new Map([
+    this.movementsInstructions = new Map([
       ["F", this.forwards],
       ["B", this.backwards],
       ["R", this.rotateRight],
@@ -21,6 +21,7 @@ module.exports = class MarsRover {
       [3, 5],
       [7, 4],
     ];
+    // to determine if rover will stop or not
     this.stopped = false;
     this.currentCoordinates = null;
     this.movesTheRover();
@@ -82,7 +83,7 @@ module.exports = class MarsRover {
         cuz we need another check to protect rover..
       */
       i < this.instructions.length && !this.stopped
-        ? this.instructionsChar.get(this.instructions[i]).call(this)
+        ? this.movementsInstructions.get(this.instructions[i]).call(this)
         : null;
     }
     let isStopped = this.stopped ? "STOPPED" : "";
