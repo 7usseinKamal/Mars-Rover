@@ -1,0 +1,16 @@
+{
+  "name": "mars-rover",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": "lite-server"
+  },
+  "author": "Hussein Kamal",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "lite-server": "^2.6.1"
+  },
+  "description": ""
+}
