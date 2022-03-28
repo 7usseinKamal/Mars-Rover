@@ -79,8 +79,8 @@ module.exports = class MarsRover {
         }
       }
       /* 
-        to avoid extra loop cycle if there is no more instructions
-        cuz we need another check to protect rover..
+        to avoid extra loop cycle call if there is no more instructions
+        cuz we need another check to protect rover.. and as well for if rover stopped
       */
       i < this.instructions.length && !this.stopped
         ? this.movementsInstructions.get(this.instructions[i]).call(this)
